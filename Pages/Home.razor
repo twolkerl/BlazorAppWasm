@@ -1,12 +1,18 @@
 ﻿@page "/"
-@using System.Globalization
 @inject IStringLocalizer<Home> localizer
 @inject IStringLocalizer<Shared> sharedLoc
 
 <PageTitle>@localizer["Title"]</PageTitle>
 
-<h1>@localizer["HelloWorldMsg"]</h1>
+<MudText Typo="Typo.h1">
+    @localizer["HelloWorldMsg"]
+</MudText>
 
-@localizer["WelcomeMsg"]
+<MudText Typo="Typo.body1">
+    @localizer["WelcomeMsg"]
+</MudText>
 
-@sharedLoc["SharedMessages"]
+<MudText Typo="Typo.body1">
+    @sharedLoc["SharedMessages"]
+</MudText>
+
