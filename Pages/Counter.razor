@@ -3,11 +3,17 @@
 
 <PageTitle>@localizer["Title"]</PageTitle>
 
-<h1>@localizer["Title"]</h1>
+<MudText Typo="Typo.h1">
+    @localizer["Title"]
+</MudText>
 
-<p role="status">@localizer["CurrentCountMsg", @currentCount]</p>
+<MudText Typo="Typo.body1">
+    @localizer["CurrentCountMsg", @currentCount]
+</MudText>
 
-<button class="btn btn-primary" @onclick="IncrementCount">@localizer["ClickMeBtn"]</button>
+<MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="IncrementCount">
+    @localizer["ClickMeBtn"]
+</MudButton>
 
 @code {
     private int currentCount = 0;
